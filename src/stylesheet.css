@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #6a5fae;
+}
+
+.Api_Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Api_Container .cl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Api_Container .name_visit_container {
+  margin-top: 20px;
+}
+
+.Api_Container .visit_channel {
+  padding: 10px 5px;
+  border-radius: 5px;
+  background: #6d68a8;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid white;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  cursor: pointer;
+}
+
+.Api_Container .visit_channel span {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.Api_Container .visit_channel span .arrow_icon {
+  margin-left: 10px;
+}
+
+.Api_Container .visit_channel:hover {
+  background: white;
+  border: 3px solid #6d68a8;
+}
+
+.Api_Container .visit_channel:hover span {
+  color: #6d68a8;
+}
+
+.Api_Container .subscriber_container {
+  position: absolute;
+  bottom: 13rem;
+  background: white;
+  padding: 35px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Api_Container .subscriber_container .profile_image {
+  width: 125px;
+  border-radius: 50% !important;
+  border: 5px solid lightblue;
+  margin-right: 20px;
+}
+
+.Api_Container .subscriber_container .name {
+  margin-bottom: 5px;
+}
+
+.Api_Container .subscriber_container .profilePicture {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.Api_Container .subscriber_container .profilePicture h2 {
+  color: #6a5fae;
+  margin-top: 10px;
+}
+
+.wave_img {
+  position: absolute;
+  bottom: 0;
+  background: #6a5fae;
+  width: 100%;
+}
+
+.subscriber_total_container {
+  background: white;
+  padding: 25px 70px;
+  border-radius: 50px;
+  margin-right: 50px;
+  -webkit-box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.subscriber_total_container .user_fa {
+  font-size: 40px;
+}
+
+.subscriber_total_container .total_subs span {
+  color: #919095;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.viewCounter_container {
+  background: white;
+  margin-right: 50px;
+  padding: 25px 70px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.viewCounter_container .fa_eye {
+  font-size: 40px;
+}
+
+.viewCounter_container span {
+  color: #919095;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.likesCount {
+  background: white;
+  padding-top: 50px;
+  margin-right: 50px;
+  padding: 25px 70px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.likesCount .user_likes {
+  font-size: 42px;
+}
+
+.likesCount span {
+  color: #919095;
+  font-weight: 800;
+}
+
+.container_loading {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: white;
+  z-index: 10;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1334px) {
+  .likesCount {
+    padding: 15px 30px;
+  }
+  .subscriber_total_container {
+    padding: 15px 25px;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
