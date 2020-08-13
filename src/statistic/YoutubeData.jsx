@@ -9,7 +9,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faPoll } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-
+import "../stylesheet.scss";
 function YoutubeData() {
   const [counter, setCounter] = useState();
   const [views, setViews] = useState();
@@ -99,17 +99,15 @@ function YoutubeData() {
           <div className="subscriber_total_container">
             <div className="user_icon">
               <FontAwesomeIcon className="user_fa" icon={faUsers} />
-            </div>
-            <div className="total_subs">
-              <h1> {counter} </h1>
-              <span>Subscribers</span>
+              <div className="total_subs">
+                <h1> {counter} </h1>
+                <span>Subscribers</span>
+              </div>
             </div>
           </div>
           <div className="likesCount">
             <div className="icons_title">
               <FontAwesomeIcon className="user_likes" icon={faThumbsUp} />
-            </div>
-            <div className="amount">
               <h1>{newArray}</h1>
               <span>Total&nbsp;Likes</span>
             </div>
@@ -117,23 +115,28 @@ function YoutubeData() {
           <div className="viewCounter_container">
             <div className="icons_title">
               <FontAwesomeIcon icon={faEye} className="fa_eye" alt="eye" />
-            </div>
-            <div className="amount">
-              <h1>{views}</h1>
-              <span>Total views</span>
+              <div className="amount">
+                <h1>{views}</h1>
+                <span>Total views</span>
+              </div>
             </div>
           </div>
-          <div className="viewCounter_container">
+          <div className="videoCounter_container">
             <div className="icons_title">
-              <FontAwesomeIcon icon={faPoll} className="fa_eye" alt="eye" />
-            </div>
-            <div className="amount">
-              <h1>{videoCount}</h1>
-              <span>Videos</span>
+              <FontAwesomeIcon
+                icon={faPoll}
+                className="fa_statistic"
+                alt="eye"
+              />
+              <div className="amount">
+                <h1>{videoCount}</h1>
+                <span>Videos</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <footer></footer>
     </div>
   );
 }

@@ -9,21 +9,21 @@
 
 body {
   width: 100%;
+  height: 100%;
   background: #6a5fae;
 }
 
-.Api_Container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.conatiner {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   .cl {
-    display: flex;
-
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .name_visit_container {
@@ -33,7 +33,6 @@ body {
   .visit_channel {
     padding: 10px 5px;
     border-radius: 5px;
-
     background: #6d68a8;
     color: white;
     display: flex;
@@ -63,14 +62,18 @@ body {
   }
 
   .subscriber_container {
-    position: absolute;
-    bottom: 13rem;
     background: white;
-    padding: 35px;
+    padding: 35px 45px;
+    margin: 50px;
+    margin-bottom: 50px;
     border-radius: 50px;
     box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
     text-align: center;
     display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
 
     .profile_image {
       width: 125px;
@@ -121,6 +124,25 @@ body {
       font-weight: 800;
       letter-spacing: 1px;
     }
+  }
+}
+
+.videoCounter_container {
+  background: white;
+  margin-right: 50px;
+  padding: 25px 70px;
+  border-radius: 50px;
+  box-shadow: 0px 12px 29px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+
+  .fa_statistic {
+    font-size: 40px;
+  }
+
+  span {
+    color: #919095;
+    font-weight: 800;
+    letter-spacing: 1px;
   }
 }
 
@@ -178,11 +200,126 @@ body {
 
 @media screen and (max-width: 1334px) {
   .likesCount {
-    padding: 15px 30px;
+    margin-top: 15px;
+    z-index: 5;
   }
 
   .subscriber_total_container {
-    padding: 15px 25px;
+    margin-top: 15px;
+    z-index: 5;
   }
 
+  .viewCounter_container {
+    margin-top: 15px;
+    z-index: 5;
+  }
+
+  .videoCounter_container {
+    margin-top: 15px;
+    z-index: 5;
+  }
+
+  .cl {
+    margin-left: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .cl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .conatiner {
+    margin-top: 25px;
+    height: 100vh;
+  }
+
+  .subscriber_container {
+    border-radius: 5px !important;
+    padding: 35px;
+    margin-top: 5rem;
+    margin-bottom: 25px !important;
+    max-width: 350px !important;
+
+    img {
+      display: none;
+    }
+  }
+
+
+
+  .likesCount {
+    padding: 30px;
+    font-size: 12px;
+    max-height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .user_likes {
+      font-size: 35px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .subscriber_total_container {
+    padding: 30px;
+    font-size: 12px;
+    max-height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: none;
+    }
+
+    .user_fa {
+      font-size: 35px;
+    }
+
+  }
+
+  .viewCounter_container {
+    padding: 20px;
+    font-size: 12px;
+    max-height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa_eye {
+      font-size: 35px;
+    }
+
+    span {
+      display: none;
+    }
+
+  }
+
+  .videoCounter_container {
+    padding: 45px;
+    border-radius: 5px;
+    max-height: 100px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa_statistic {
+      font-size: 35px;
+    }
+
+    span {
+      display: none;
+    }
+  }
 }

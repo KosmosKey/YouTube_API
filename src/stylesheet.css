@@ -29,12 +29,6 @@ body {
           align-items: center;
 }
 
-.Api_Container .cl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .Api_Container .name_visit_container {
   margin-top: 20px;
 }
@@ -202,11 +196,10 @@ body {
 }
 
 @media screen and (max-width: 1334px) {
-  .likesCount {
-    padding: 15px 30px;
-  }
-  .subscriber_total_container {
-    padding: 15px 25px;
+  .cl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
